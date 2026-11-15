@@ -1,0 +1,4 @@
+# SDK oficial de MCP para Python (série 2.x), com a CLI de desenvolvimento
+mcp[cli]>=2,<3
+# Servidor MCP pronto, de referência, usado na etapa 3
+mcp-server-time
