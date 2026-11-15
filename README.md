@@ -79,3 +79,20 @@ Para rodar como servidor de rede, em `http://127.0.0.1:8000/mcp`:
 ```
 python servidor.py --http
 ```
+
+## Etapa 5: cliente do nosso servidor
+
+`cliente.py` consome o `servidor.py`: descobre o que ele oferece, chama as
+ferramentas, lê o recurso e busca o prompt.
+
+```
+python cliente.py explorar
+python cliente.py adicionar "Gravar a aula 5"
+python cliente.py listar
+python cliente.py concluir 1
+python cliente.py resumo
+python cliente.py planejar estudos
+```
+
+O mesmo cliente fala com o servidor de rede. Em um terminal, rode
+`python servidor.py --http`; em outro, `python cliente.py --http listar`.
