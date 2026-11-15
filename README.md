@@ -49,3 +49,15 @@ Saída esperada: `SDK de MCP instalado: versão 2.x.x`
 
 Atenção: este curso usa a série 2.x do SDK. Tutoriais antigos usam
 `from mcp.server.fastmcp import FastMCP`, que não existe mais na 2.x.
+
+## Etapa 3: cliente MCP
+
+`cliente_relogio.py` se conecta a um servidor MCP pronto (`mcp-server-time`),
+lista as ferramentas e chama `get_current_time`.
+
+```
+python cliente_relogio.py
+```
+
+O cliente inicia o servidor sozinho, como processo filho. Não é preciso abrir
+outro terminal.
