@@ -2,3 +2,5 @@
 mcp[cli]>=2,<3
 # Servidor MCP pronto, de referência, usado na etapa 3
 mcp-server-time
+# SDK da Anthropic, para conversar com o Claude na etapa 6
+anthropic>=2,<3

@@ -96,3 +96,31 @@ python cliente.py planejar estudos
 
 O mesmo cliente fala com o servidor de rede. Em um terminal, rode
 `python servidor.py --http`; em outro, `python cliente.py --http listar`.
+
+## Etapa 6 (bônus): o Claude escolhe as ferramentas
+
+`chat.py` entrega ao Claude as ferramentas do nosso servidor e deixa o modelo
+decidir qual chamar a partir de um pedido em português.
+
+Requer uma chave da API da Anthropic (uso cobrado à parte da assinatura).
+
+Windows (PowerShell):
+
+```
+pip install -r requirements.txt
+$env:ANTHROPIC_API_KEY = "sua-chave"
+python chat.py
+```
+
+Linux e macOS:
+
+```
+pip install -r requirements.txt
+export ANTHROPIC_API_KEY="sua-chave"
+python chat.py
+```
+
+Experimente: "anota aí que preciso gravar a aula 6 e depois me mostra o que
+falta fazer".
+
+O modelo padrão é `claude-sonnet-5-5`; para trocar, defina `MODELO_CLAUDE`.
