@@ -61,3 +61,21 @@ python cliente_relogio.py
 
 O cliente inicia o servidor sozinho, como processo filho. Não é preciso abrir
 outro terminal.
+
+## Etapa 4: servidor MCP
+
+`servidor.py` é um servidor de lista de tarefas, com três ferramentas, um
+recurso e um prompt. Os dados ficam em `tarefas.json`, ao lado do arquivo.
+
+Um servidor stdio não se usa sozinho no terminal: ele fica esperando um
+cliente. Para testar com o MCP Inspector (precisa de `uv` e Node.js):
+
+```
+mcp dev servidor.py
+```
+
+Para rodar como servidor de rede, em `http://127.0.0.1:8000/mcp`:
+
+```
+python servidor.py --http
+```
