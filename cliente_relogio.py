@@ -71,5 +71,18 @@ async def usar_servidor(servidor: StdioServerParameters) -> None:
         print(resultado.content[0].text)
 
 
+        resultado2 = await cliente.call_tool(
+            "convert_time",
+            {
+                "source_timezone": "America/Sao_Paulo",
+                "time": "12:00",
+                "target_timezone": "Asia/Tokyo",
+            },
+        )
+
+        print("\nResultado da conversão:")
+        print(resultado2.content[0].text)
+
+
 if __name__ == "__main__":
     asyncio.run(usar_servidor(definir_servidor()))
